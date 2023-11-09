@@ -1,0 +1,40 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_db_instance.db_instance_service1_c_c (expand)" [label = "aws_db_instance.db_instance_service1_c_c", shape = "box"]
+		"[root] aws_db_instance.db_instance_service2_c_c (expand)" [label = "aws_db_instance.db_instance_service2_c_c", shape = "box"]
+		"[root] aws_db_instance.db_instance_service3_c_c_1_c (expand)" [label = "aws_db_instance.db_instance_service3_c_c_1_c", shape = "box"]
+		"[root] aws_elb.aws_elb_1 (expand)" [label = "aws_elb.aws_elb_1", shape = "box"]
+		"[root] aws_instance.f1_8 (expand)" [label = "aws_instance.f1_8", shape = "box"]
+		"[root] aws_lambda_function.aws_lambda_function_7 (expand)" [label = "aws_lambda_function.aws_lambda_function_7", shape = "box"]
+		"[root] aws_s3_bucket.aws_s3_bucket_4 (expand)" [label = "aws_s3_bucket.aws_s3_bucket_4", shape = "box"]
+		"[root] aws_subnet.aws_subnet_3 (expand)" [label = "aws_subnet.aws_subnet_3", shape = "box"]
+		"[root] aws_subnet.aws_subnet_5 (expand)" [label = "aws_subnet.aws_subnet_5", shape = "box"]
+		"[root] aws_subnet.aws_subnet_6 (expand)" [label = "aws_subnet.aws_subnet_6", shape = "box"]
+		"[root] aws_vpc.aws_vpc_2 (expand)" [label = "aws_vpc.aws_vpc_2", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] aws_db_instance.db_instance_service1_c_c (expand)" -> "[root] aws_subnet.aws_subnet_5 (expand)"
+		"[root] aws_db_instance.db_instance_service2_c_c (expand)" -> "[root] aws_subnet.aws_subnet_6 (expand)"
+		"[root] aws_db_instance.db_instance_service3_c_c_1_c (expand)" -> "[root] aws_subnet.aws_subnet_3 (expand)"
+		"[root] aws_elb.aws_elb_1 (expand)" -> "[root] aws_subnet.aws_subnet_3 (expand)"
+		"[root] aws_elb.aws_elb_1 (expand)" -> "[root] aws_subnet.aws_subnet_5 (expand)"
+		"[root] aws_elb.aws_elb_1 (expand)" -> "[root] aws_subnet.aws_subnet_6 (expand)"
+		"[root] aws_instance.f1_8 (expand)" -> "[root] aws_subnet.aws_subnet_6 (expand)"
+		"[root] aws_lambda_function.aws_lambda_function_7 (expand)" -> "[root] aws_subnet.aws_subnet_5 (expand)"
+		"[root] aws_s3_bucket.aws_s3_bucket_4 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_subnet.aws_subnet_3 (expand)" -> "[root] aws_vpc.aws_vpc_2 (expand)"
+		"[root] aws_subnet.aws_subnet_5 (expand)" -> "[root] aws_vpc.aws_vpc_2 (expand)"
+		"[root] aws_subnet.aws_subnet_6 (expand)" -> "[root] aws_vpc.aws_vpc_2 (expand)"
+		"[root] aws_vpc.aws_vpc_2 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_db_instance.db_instance_service1_c_c (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_db_instance.db_instance_service2_c_c (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_db_instance.db_instance_service3_c_c_1_c (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_elb.aws_elb_1 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.f1_8 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lambda_function.aws_lambda_function_7 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket.aws_s3_bucket_4 (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+	}
+}
+
